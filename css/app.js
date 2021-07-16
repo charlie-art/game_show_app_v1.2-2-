@@ -1,3 +1,3 @@
 const qwerty = document.querySelector('#qwerty');
-phrase = document.querySelector('#phrase');
-startButton = document.querySelector('.btn_reset');
+const phrase = document.querySelector('#phrase');
+const startButton = document.querySelector('.btn__reset');
