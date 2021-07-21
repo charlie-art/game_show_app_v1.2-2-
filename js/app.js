@@ -8,4 +8,8 @@ startButton.addEventListener('click', (event) => {
         startOverlay.style.display = 'none';
     };
 
+    function stub() {
+        // This is for when I declare functions and parameters.
+    };
+
 });
