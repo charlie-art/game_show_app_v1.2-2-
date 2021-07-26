@@ -2,7 +2,7 @@ const qwerty = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
 const startButton = document.querySelector('.btn__reset');
 
-startButton.addEventListener('click', (event) => {
+startButton.addEventListener('click'), (event) => {
     const startOverlay = event.target.parentNode;
     if (startOverlay.className === 'start' || startOverlay.className === 'win' || startOverlay.className === 'lose') {
         startOverlay.style.display = 'none';
@@ -12,7 +12,7 @@ startButton.addEventListener('click', (event) => {
         // This is for when I declare functions and parameters.
     };
 
-    phrases = [
+    const phrases = [
         'Coding is fun',
         'JavaScript is lit',
         'Your doing great.',
@@ -20,8 +20,8 @@ startButton.addEventListener('click', (event) => {
         'Keep learning',
     ];
 
-    const phaseArray = getRandomPhraseArray(phrases);
-    addPhraseToDisplay(phraseArray);
+    const phrase = getRandomPhrase(phrases);
+    addPhraseToDisplay(phrase);
 
     const checkLetter = (letter) => {
         let letters = document.querySelectorAll('.letter')
