@@ -40,10 +40,5 @@ startButton.addEventListener('click'), (event) => {
         } else if (matchedLetterCount > 0) {
             letterFound = letter;
             matchedLetterCount = 0;
-        }
-    };
-
-
-
-
+        };
 
