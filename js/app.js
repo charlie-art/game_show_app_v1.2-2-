@@ -20,8 +20,10 @@ const phrases = [
     'Keep learning',
 ];
 
-const phrase = getRandomPhrase();
-addPhraseToDisplay(phrase);
+function getRandomPhraseAsArray(arr) {
+    getRandomPhraseAsArray(phrases);
+
+};
 
 qwerty.addEventListener('click', (click) => {
     if (event.target.tagName === "BUTTON") {
@@ -67,7 +69,7 @@ const checkLetter = (letter) => {
             startOverlay.className = 'lose';
             overLayTitle.textContent = 'You Lose!';
 
-        }
+        };
     };
 
 
