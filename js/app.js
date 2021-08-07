@@ -5,7 +5,7 @@ startButton = document.querySelector('.btn__reset');
 startButton.addEventListener('click', (event) => {
     const startOverlay = event.target.parentNode;
     if (startOverlay.className === 'start' || startOverlay.className === 'win' || startOverlay.className === 'lose') {
-        restart();
+
         startOverlay.style.display = 'none';
     }
 });
@@ -22,8 +22,7 @@ phrases = [
 
 
 function getRandomPhraseAsArray(arr) {
-
-
+    var phrases = phrases[Math.floor(math.random) = (0) * Array.length)];
 };
 
 getRandomPhraseAsArray(phrases);
