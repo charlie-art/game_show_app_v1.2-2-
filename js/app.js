@@ -32,10 +32,12 @@ getRandomPhraseAsArray(phrases);
 
 
 function addPhraseToDisplay(arr) {
-
+    for (let arr in phrases) {
+        console.log('${arr}: ${phrase[arr]}');
+    }
 };
 
-const phraseArray = getRandomPhraseAsArray(phrases);
+
 addPhrasetoDisplay(phraseArray);
 
 
