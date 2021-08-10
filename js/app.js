@@ -32,8 +32,9 @@ getRandomPhraseAsArray(phrases);
 
 
 function addPhraseToDisplay(arr) {
-    for (let arr in phrases) {
-        console.log('${arr}: ${phrase[arr]}');
+    for (let i = 0; i < myArray.length; i++) {
+        console.log(myArray[i].phrases);
+        console.log(`phrases: ${index}, Name: ${profile.arr}`);
     }
 };
 
@@ -41,72 +42,72 @@ function addPhraseToDisplay(arr) {
 addPhrasetoDisplay(phraseArray);
 
 
-//const checkLetter = (letter) => {
-//let letters = document.querySelectorAll('.letter')
-//matchedLetterCount = 0;
-//letters.forEach(item => {
-// let currentLetter = item.innerHTML.toLowercase();
-// if (currentLetter === letter) {
-//    item.className += 'show';
-//     matchedLetterCount += 1;
-// }
-// });
-// if (matchedLetterCount === 0) {
-//    letterFound = null;
-//    matchedLetterCount = 0;
-//  } else if (matchedLetterCount > 0) {
-//     letterFound = letter;
-//     matchedLetterCount = 0;
-// }
-//};
+const checkLetter = (letter) => {
+    let letters = document.querySelectorAll('.letter')
+    matchedLetterCount = 0;
+    letters.forEach(item => {
+        let currentLetter = item.innerHTML.toLowercase();
+        if (currentLetter === letter) {
+            item.className += 'show';
+            matchedLetterCount += 1;
+        }
+    });
+    if (matchedLetterCount === 0) {
+        letterFound = null;
+        matchedLetterCount = 0;
+    } else if (matchedLetterCount > 0) {
+        letterFound = letter;
+        matchedLetterCount = 0;
+    }
+};
 
-//qwerty.addEventListener('click', (event) => {
-// if (event.target.tagName === "BUTTON") {
-//  let button,
-//  letterFound = 'missed',
-// tries = document.querySelectorAll('.tries');
+qwerty.addEventListener('click', (event) => {
+    if (event.target.tagName === "BUTTON") {
+        let button,
+            letterFound = 'missed',
+            tries = document.querySelectorAll('.tries');
 
-// }
-//});
+    }
+});
 
-//const checkLetter = (letter) => {
-//let letters = document.querySelectorAll('.letter'),
-// matchedletterCount = 0;
-// letters.forEach(item => {
-// let currentLetter = item.innerHTML.toLowerCase();
-//if (currentLetter === letter) {
-   // item.className += ' show ';
-   // matchedLetterCount += 1;
+checkWin = () => {
+    const revealledLetters = document.querySelectorAll('show'),
+        lettersInPhase = document.querySelectorAll('.letter');
+    let startOverlay = document.querySelector('#overlay');
+    overlayTitle = document.querySelector('.title');
 
-//}
-    //});
-//if (matchedletterCount === 0) {
-   // letterFound = null;
-   // matchedLetterCount = 0;
-//} else if (matchedLetterCount > 0) {
-  //  letterFound = letter;
-  //  matchedLetterCount = 0;
-//}
-//}
+    if (revealledLetters.length === lettersInPhase.length) {
+        startOverlay.style.display = 'flex';
+        startOverlay.className = 'win';
+        overlayTitle.textContent = 'You win';
+    }
+    else if (missed === 5) {
+        startOverlay.style.display = 'flex';
+        startOverlay.className = 'lose';
+        overLayTitle.textContent = 'You Lose!';
 
-//checkWin = () => {
-    //const revealledLetters = document.querySelectorAll('show'),
-      //  lettersInPhase = document.querySelectorAll('.letter');
-   // let startOverlay = document.querySelector('#overlay');
-   // overlayTitle = document.querySelector('.title');
+    }
+};
 
-   // if (revealledLetters.length === lettersInPhase.length) {
-      //  startOverlay.style.display = 'flex';
-      //  startOverlay.className = 'win';
-       // overlayTitle.textContent = 'You win';
-   // }
-   // else if (missed === 5) {
-      //  startOverlay.style.display = 'flex';
-      //  startOverlay.className = 'lose';
-      //  overLayTitle.textContent = 'You Lose!';
+const checkLetter = (letter) => {
+    let letters = document.querySelectorAll('.letter'),
+        matchedletterCount = 0;
+    letters.forEach(item => {
+        let currentLetter = item.innerHTML.toLowerCase();
+        if (currentLetter === letter) {
+            item.className += ' show ';
+            matchedLetterCount += 1;
 
-    //}
-//};
+        }
+    });
+    if (matchedletterCount === 0) {
+        letterFound = null;
+        matchedLetterCount = 0;
+    } else if (matchedLetterCount > 0) {
+        letterFound = letter;
+        matchedLetterCount = 0;
+    }
+};
 
 
 
