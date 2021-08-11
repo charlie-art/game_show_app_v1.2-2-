@@ -1,5 +1,5 @@
 const qwerty = document.querySelector('#qwerty');
-const phrase = document.querySelector('#phrase');
+const phrase = document.querySelector('#phrases');
 const startButton = document.querySelector('.btn__reset');
 
 startButton.addEventListener('click', (event) => {
@@ -30,16 +30,14 @@ function getRandomPhraseAsArray(arr) {
 
 getRandomPhraseAsArray(phrases);
 
-
 function addPhraseToDisplay(arr) {
-    for (let i = 0; i < myArray.length; i++) {
-        console.log(myArray[i].phrases);
-        console.log(`phrases: ${index}, Name: ${profile.arr}`);
-    }
+
 };
 
 
+const phraseArray = getRandomPhraseAsArray(phrases);
 addPhrasetoDisplay(phraseArray);
+
 
 
 const checkLetter = (letter) => {
@@ -61,53 +59,33 @@ const checkLetter = (letter) => {
     }
 };
 
-qwerty.addEventListener('click', (event) => {
-    if (event.target.tagName === "BUTTON") {
-        let button,
-            letterFound = 'missed',
-            tries = document.querySelectorAll('.tries');
+//qwerty.addEventListener('click', (event) => {
+   // if (event.target.tagName === "BUTTON") {
+       // let button,
+         //   letterFound = 'missed',
+         //   tries = document.querySelectorAll('.tries');
 
-    }
-});
+   // }
+//});
 
-checkWin = () => {
-    const revealledLetters = document.querySelectorAll('show'),
-        lettersInPhase = document.querySelectorAll('.letter');
-    let startOverlay = document.querySelector('#overlay');
-    overlayTitle = document.querySelector('.title');
+//checkWin = () => {
+   // const revealledLetters = document.querySelectorAll('show'),
+      //  lettersInPhase = document.querySelectorAll('.letter');
+   // let startOverlay = document.querySelector('#overlay');
+   // overlayTitle = document.querySelector('.title');
 
-    if (revealledLetters.length === lettersInPhase.length) {
-        startOverlay.style.display = 'flex';
-        startOverlay.className = 'win';
-        overlayTitle.textContent = 'You win';
-    }
-    else if (missed === 5) {
-        startOverlay.style.display = 'flex';
-        startOverlay.className = 'lose';
-        overLayTitle.textContent = 'You Lose!';
+   // if (revealledLetters.length === lettersInPhase.length) {
+     //   startOverlay.style.display = 'flex';
+      //  startOverlay.className = 'win';
+      //  overlayTitle.textContent = 'You win';
+  //  }
+  //  else if (missed === 5) {
+     //   startOverlay.style.display = 'flex';
+     //   startOverlay.className = 'lose';
+     //   overLayTitle.textContent = 'You Lose!';
 
-    }
-};
-
-const checkLetter = (letter) => {
-    let letters = document.querySelectorAll('.letter'),
-        matchedletterCount = 0;
-    letters.forEach(item => {
-        let currentLetter = item.innerHTML.toLowerCase();
-        if (currentLetter === letter) {
-            item.className += ' show ';
-            matchedLetterCount += 1;
-
-        }
-    });
-    if (matchedletterCount === 0) {
-        letterFound = null;
-        matchedLetterCount = 0;
-    } else if (matchedLetterCount > 0) {
-        letterFound = letter;
-        matchedLetterCount = 0;
-    }
-};
+  //  }
+//};
 
 
 
