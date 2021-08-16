@@ -63,13 +63,13 @@ function checkLetter(btn) {
     return guessed;
 
     qwerty.addEventListener('click', (event) => {
-        let letterFound = checkLetter(event0);
+        let letterFound = checkLetter(event);
 
         if (event.target.tagName === "BUTTON") {
             event.target.classList = "chosen";
             event.target.disabled = "true";
             if (letterFound === false && missed < 5) {
-                heart[missed].setAttribute('src', 'images/lostHeart.png')
+                heart[missed].setAttribute('src', 'images/liveHeart.png')
                 missed++;
             }
         }
