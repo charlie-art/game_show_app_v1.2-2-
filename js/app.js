@@ -1,16 +1,9 @@
 
 const overlay = document.getElementById('#overlay');
-const startButton = document.querySelector('.start-button');
+const start = document.getElementsByClassName('.start');
+const btn_reset = document.querySelector('.btn_reset');
+const qwerty = document.getElementById('#qwerty');
 
-
-startButton.addEventListener('click', () => {
-    overlay.style.display = "none";
-    if (reset === true && missed === 5) {
-        resetGame();
-    } else if (reset === true && missed != 5) {
-        resetGame();
-    }
-});
 
 
 
@@ -22,6 +15,15 @@ let phrases = [
     'Keep learning',
 ];
 
+
+start.addEventListener('click', () => {
+    overlay.style.display = "none";
+    if (reset === true && missed === 5) {
+        resetGame();
+    } else if (reset === true && missed != 5) {
+        resetGame();
+    }
+});
 
 
 function getRandomPhraseAsArray(arr) {
@@ -42,9 +44,10 @@ function addPhraseToDisplay(arr) {
 
         } else {
             li.className = "space";
+            return guessed;
         }
     }
-}
+};
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
 
@@ -58,23 +61,24 @@ function checkLetter(btn) {
         if (btn.target.textContent === letters[i].textContent.toLowerCase()) {
             letters[i].classList.add("show");
             guessed = true;
+            return guessed;
         }
     }
-    return guessed;
+};
 
-    qwerty.addEventListener('click', (event) => {
-        let letterFound = checkLetter(event);
+qwerty.addEventListener('click', () => {
+    let letterFound = checkLetter(event);
 
-        if (event.target.tagName === "BUTTON") {
-            event.target.classList = "chosen";
-            event.target.disabled = "true";
-            if (letterFound === false && missed < 5) {
-                heart[missed].setAttribute('src', 'images/liveHeart.png')
-                missed++;
-            }
+    if (event.target.tagName === "BUTTON") {
+        event.target.classList = "chosen";
+        event.target.disabled = "true";
+        if (letterFound === false && missed < 5) {
+            heart[missed].setAttribute('src', 'images/liveHeart.png')
+            missed++;
+            checkwin();
         }
-        checkwin();
-    });
+
+    };
 
     function checkWin() {
         if (letters.length === lettersShown.length) {
@@ -96,7 +100,7 @@ function checkLetter(btn) {
         }
     }
 
-    qwerty.addEventListner('click', (event) => {
+    qwerty.addEventListner('click'), (event) => {
         let letterFound = checkLetter(event);
 
         if (event.target.tagName === "BUTTON") {
@@ -104,10 +108,11 @@ function checkLetter(btn) {
             event.target.disabled = "true";
             if (letterFound === false && missed < 5) {
                 heart[missed].setAttribute('src', 'images/lostHeart.png');
+                checkWin();
             }
         }
-        checkWin();
-    });
+    }
+});
 
 
 
