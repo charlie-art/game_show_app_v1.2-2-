@@ -1,8 +1,9 @@
 
 const overlay = document.getElementById('#overlay');
 const start = document.getElementsByClassName('.start');
-const btn_reset = document.querySelector('.btn_reset');
+const btn__reset = document.querySelector('.btn__reset');
 const qwerty = document.getElementById('#qwerty');
+let ol = document.querySelectorAll('ol');
 
 
 
@@ -16,7 +17,7 @@ let phrases = [
 ];
 
 
-start.addEventListener('click', () => {
+btn__reset.addEventListener('click', () => {
     overlay.style.display = "none";
     if (reset === true && missed === 5) {
         resetGame();
@@ -36,14 +37,14 @@ function getRandomPhraseAsArray(arr) {
 
 function addPhraseToDisplay(arr) {
     for (var i = 0; i < arr.length; i++) {
-        let li = document.createElement('li');
-        li.textContent = arr[i];
-        ul.appendChild(li);
+        let ol = document.getElementsByName('ol')[0];
+        ol.textContent = arr[i];
+        ol.appendChild(li);
         if (arr[i] != "") {
-            li.className = "letter";
+            ol.className = "letter";
 
         } else {
-            li.className = "space";
+            ol.className = "space";
             return guessed;
         }
     }
