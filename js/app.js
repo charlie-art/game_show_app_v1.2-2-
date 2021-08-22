@@ -1,8 +1,8 @@
 
-const overlay = document.getElementById('#overlay');
-const start = document.getElementsByClassName('.start');
-const btn__reset = document.querySelector('.btn__reset');
-const qwerty = document.getElementById('#qwerty');
+const overlay = document.getElementById("overlay");
+const start = document.getElementsByClassName('start');
+const btn__reset = document.querySelector("btn__reset");
+const qwerty = document.getElementById('qwerty');
 let ol = document.querySelectorAll('ol');
 
 
@@ -45,7 +45,7 @@ function addPhraseToDisplay(arr) {
 
         } else {
             ol.className = "space";
-            return guessed;
+            console.log(guessed);
         }
     }
 };
@@ -56,64 +56,64 @@ addPhraseToDisplay(phraseArray);
 
 
 
-function checkLetter(btn) {
-    let guessed = false;
-    for (var i = 0; i < letters.length; i++) {
-        if (btn.target.textContent === letters[i].textContent.toLowerCase()) {
-            letters[i].classList.add("show");
-            guessed = true;
-            return guessed;
-        }
-    }
-};
+//function checkLetter(btn) {
+    //let guessed = false;
+   // for (var i = 0; i < letters.length; i++) {
+       // if (btn.target.textContent === letters[i].textContent.toLowerCase()) {
+           // letters[i].classList.add("show");
+         //   guessed = true;
+         //   return guessed;
+      //  }
+   // }
+//};
 
-qwerty.addEventListener('click', () => {
-    let letterFound = checkLetter(event);
+//qwerty.addEventListener('click', () => {
+    //let letterFound = checkLetter(event);
 
-    if (event.target.tagName === "BUTTON") {
-        event.target.classList = "chosen";
-        event.target.disabled = "true";
-        if (letterFound === false && missed < 5) {
-            heart[missed].setAttribute('src', 'images/liveHeart.png')
-            missed++;
-            checkwin();
-        }
+   // if (event.target.tagName === "BUTTON") {
+     //   event.target.classList = "chosen";
+      //  event.target.disabled = "true";
+       // if (letterFound === false && missed < 5) {
+         //   heart[missed].setAttribute('src', 'images/liveHeart.png')
+         //   missed++;
+         //   checkwin();
+       // }
 
-    };
+   // };
 
-    function checkWin() {
-        if (letters.length === lettersShown.length) {
-            reset = true;
-            overlay.style.display = "";
-            overlay.className = "win";
-            title.innerHTML = "<h1>You win!</h1>"
-            startButton.textContent = "Start Again!";
-            svg.style.display = "none";
-        }
-        else if (missed === 5) {
-            overlay.style.display = "";
-            overlay.className = "lose";
-            title.innerHTML = "<h1>GAME OVER!</h1>";
-            startButton.textContent = "Start Again!";
-            svg.style.display = "none";
-            reset = true;
+    //function checkWin() {
+      //  if (letters.length === lettersShown.length) {
+         //   reset = true;
+          //  overlay.style.display = "";
+           // overlay.className = "win";
+           // title.innerHTML = "<h1>You win!</h1>"
+           // startButton.textContent = "Start Again!";
+           // svg.style.display = "none";
+       // }
+       // else if (missed === 5) {
+       //     overlay.style.display = "";
+       //     overlay.className = "lose";
+        //    title.innerHTML = "<h1>GAME OVER!</h1>";
+        //    startButton.textContent = "Start Again!";
+         //   svg.style.display = "none";
+         //   reset = true;
 
-        }
-    }
+       // }
+   // }
 
-    qwerty.addEventListner('click'), (event) => {
-        let letterFound = checkLetter(event);
+   // qwerty.addEventListner('click'), (event) => {
+      //  let letterFound = checkLetter(event);
 
-        if (event.target.tagName === "BUTTON") {
-            event.target.classList = "chosen";
-            event.target.disabled = "true";
-            if (letterFound === false && missed < 5) {
-                heart[missed].setAttribute('src', 'images/lostHeart.png');
-                checkWin();
-            }
-        }
-    }
-});
+      //  if (event.target.tagName === "BUTTON") {
+       //     event.target.classList = "chosen";
+        //    event.target.disabled = "true";
+         //   if (letterFound === false && missed < 5) {
+         //       heart[missed].setAttribute('src', 'images/lostHeart.png');
+         //       checkWin();
+          //  }
+      //  }
+   // }
+//});
 
 
 
