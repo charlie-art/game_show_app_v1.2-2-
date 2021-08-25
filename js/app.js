@@ -52,19 +52,29 @@ function addPhraseToDisplay(arr) {
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
 
+//Create an a​ ddPhraseToDisplay​ function that loops through an array of characters. You will need to write it ​so that it can take ​any​ array of letters and add it to the display.
+//❏ Inside the loop, for each character in the array,
+// Create a list l​ i​ i​tem
+//Put the character inside of the list item
+// Append that list item to the #​ phrase u​ l in your HTML
+// If the character in the array is a letter and not a space, the
+// function should add the class “​ letter”​ to the list item.If not, add
+//the ​“space”​ class.
+// To use the function, you’ll get the value returned by the
+//getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
 
 
 
 
 //function checkLetter(btn) {
-    //let guessed = false;
-   // for (var i = 0; i < letters.length; i++) {
+  //  let guessed = false;
+    //for (var i = 0; i < letters.length; i++) {
        // if (btn.target.textContent === letters[i].textContent.toLowerCase()) {
-           // letters[i].classList.add("show");
-         //   guessed = true;
-         //   return guessed;
-      //  }
-   // }
+         //   letters[i].classList.add("show");
+          //  guessed = true;
+          //  return guessed;
+       // }
+    //}
 //};
 
 //qwerty.addEventListener('click', () => {
