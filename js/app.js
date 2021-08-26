@@ -17,7 +17,7 @@ let phrases = [
 ];
 
 
-btn__reset.addEventListener('click', () => {
+document.onload = ('click', () => {
     overlay.style.display = "none";
     if (reset === true && missed === 5) {
         resetGame();
