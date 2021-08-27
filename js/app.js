@@ -36,15 +36,15 @@ function getRandomPhraseAsArray(arr) {
 
 
 function addPhraseToDisplay(arr) {
+    let ol = document.getElementsByName('#phrase ul')[0];
     for (var i = 0; i < arr.length; i++) {
-        let ol = document.getElementsByName('ol')[0];
         ol.textContent = arr[i];
-        ol.appendChild(li);
-        if (arr[i] != "") {
-            ol.className = "letter";
+        ol.appendChild(ul);
+        if (arr[i] != "li") {
+            li.className = ".letter";
 
         } else {
-            ol.className = "space";
+            li.className = ".space";
             console.log(guessed);
         }
     }
