@@ -3,7 +3,6 @@ const overlay = document.getElementById("overlay");
 const start = document.getElementsByClassName('start');
 const btn__reset = document.querySelector("btn__reset");
 const qwerty = document.getElementById('qwerty');
-let ol = document.querySelectorAll('ol');
 
 
 
@@ -34,13 +33,12 @@ function getRandomPhraseAsArray(arr) {
 }
 
 
-
+let ol = document.getElementsByName('#phrase ul')[0];
 function addPhraseToDisplay(arr) {
-    let ol = document.getElementsByName('#phrase ul')[0];
     for (var i = 0; i < arr.length; i++) {
         ol.textContent = arr[i];
         ol.appendChild(ul);
-        if (arr[i] != "li") {
+        if (arr[i] != "ol") {
             li.className = ".letter";
 
         } else {
@@ -66,16 +64,16 @@ addPhraseToDisplay(phraseArray);
 
 
 
-//function checkLetter(btn) {
-  //  let guessed = false;
-    //for (var i = 0; i < letters.length; i++) {
-       // if (btn.target.textContent === letters[i].textContent.toLowerCase()) {
-         //   letters[i].classList.add("show");
-          //  guessed = true;
-          //  return guessed;
-       // }
-    //}
-//};
+function checkLetter(btn) {
+    let guessed = false;
+    for (var i = 0; i < letters.length; i++) {
+        if (btn.target.textContent === letters[i].textContent.toLowerCase()) {
+            letters[i].classList.add("show");
+            guessed = true;
+            return guessed;
+        }
+    }
+};
 
 //qwerty.addEventListener('click', () => {
     //let letterFound = checkLetter(event);
