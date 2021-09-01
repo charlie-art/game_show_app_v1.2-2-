@@ -33,12 +33,10 @@ function getRandomPhraseAsArray(arr) {
 }
 
 
-let ul = document.getElementsByName('#phrase ul')[0];
+let ul = document.getElementsByName('#phrase')[0];
 function addPhraseToDisplay(arr) {
-    ul.textContent = arr[i];
     for (var i = 0; i < arr.length; i++) {
-
-        ul.appendChild('#phrase ul');
+        li.appendChild('#phrase ul');
         if (arr[i] != "ul") {
             li.className = ".letter";
 
@@ -55,7 +53,7 @@ addPhraseToDisplay(phraseArray);
 //❏ Inside the loop, for each character in the array,
 // Create a list l​ i​ i​tem
 //Put the character inside of the list item
-// Append that list item to the #​ phrase u​ l in your HTML
+// Append that list item to the #​ phrase u​l in your HTML
 // If the character in the array is a letter and not a space, the
 // function should add the class “​ letter”​ to the list item.If not, add
 //the ​“space”​ class.
