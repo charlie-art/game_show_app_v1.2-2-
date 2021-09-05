@@ -33,11 +33,12 @@ function getRandomPhraseAsArray(arr) {
 }
 
 
-let ul = document.querySelector('#phrase')[0];
+let ul = document.querySelectorAll('#phrase ul');
 function addPhraseToDisplay(arr) {
     for (var i = 0; i < arr.length; i++) {
         var li = document.createElement("li");
-        li.appendChild('#phrase ul');
+        li.appendChild('ul');
+
         if (arr[i] != "ul") {
             li.className = ".letter";
 
