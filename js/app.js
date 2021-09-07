@@ -32,18 +32,17 @@ function getRandomPhraseAsArray(arr) {
     return splitString;
 }
 
-
-let ul = document.querySelectorAll('#phrase ul');
+let ul = document.querySelector("#phraseList");
 function addPhraseToDisplay(arr) {
     for (var i = 0; i < arr.length; i++) {
         var li = document.createElement("li");
-        li.appendChild('ul');
+        li.textContent += arr[i];
+        ul.appendChild(li);
 
         if (arr[i] != "ul") {
-            li.className = ".letter";
-
+            li.className = "letter";
         } else {
-            li.className = ".space";
+            li.className = "space";
             console.log(guessed);
         }
     }
@@ -76,19 +75,19 @@ function checkLetter(btn) {
     }
 };
 
-//qwerty.addEventListener('click', () => {
-    //let letterFound = checkLetter(event);
+qwerty.addEventListener('click', () => {
+    let letterFound = checkLetter(event);
 
-   // if (event.target.tagName === "BUTTON") {
-     //   event.target.classList = "chosen";
-      //  event.target.disabled = "true";
-       // if (letterFound === false && missed < 5) {
-         //   heart[missed].setAttribute('src', 'images/liveHeart.png')
-         //   missed++;
-         //   checkwin();
-       // }
+    if (event.target.tagName === "BUTTON") {
+        event.target.classList = "chosen";
+        event.target.disabled = "true";
+        if (letterFound === false && missed < 5) {
+            heart[missed].setAttribute('src', 'images/liveHeart.png')
+            missed++;
+            checkwin();
+        }
 
-   // };
+    };
 
     //function checkWin() {
       //  if (letters.length === lettersShown.length) {
