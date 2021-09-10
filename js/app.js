@@ -113,19 +113,6 @@ function checkWin() {
     }
 }
 
-qwerty.addEventListner('click'), (event) => {
-    let letterFound = checkLetter(event);
-
-    if (event.target.tagName === "BUTTON") {
-        event.target.classList = "chosen";
-        event.target.disabled = "true";
-        if (letterFound === false && missed < 5) {
-            heart[missed].setAttribute('src', 'images/lostHeart.png');
-            checkWin();
-        }
-    }
-};
-
 
 
 
