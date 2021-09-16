@@ -10,6 +10,4 @@ phrases = {
 'Index.Html'
 'Sass'
 
-
-
 };
