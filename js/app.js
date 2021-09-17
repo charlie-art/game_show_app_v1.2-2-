@@ -3,11 +3,17 @@ const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 let missed = ('0');
 
-phrases = {
-    'Coding Rules'
-'I love to code'
-'Fast Coding'
-'Index.Html'
-'Sass'
+let phrases = [
+    ["Coding Rules",
+        "I love to code",
+        "Fast Coding",
+        "Index.Html",
+        "Sass",]
 
-};
+];
+
+startGame.addEventListner('click', e => {
+
+});
+
+
