@@ -13,17 +13,11 @@ let phrases = [
 ];
 
 btn__reset.addEventListener('click', e => {
-
+    document.getElementById("overlay").style.display = "none";
 });
 
-btn__reset.style {
-    display: block;
 
-};
 
-btn__reset.style {
-    display: none;
 
-};
 
 
