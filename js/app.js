@@ -1,5 +1,5 @@
 const qwerty = document.getElementById('qwerty');
-const phrase = document.getElementById('phrase');
+const phrase = document.getElementById('phrases');
 const btn__reset = document.querySelector('.btn__reset');
 let missed = 0;
 
@@ -16,13 +16,13 @@ btn__reset.addEventListener('click', e => {
     document.getElementById("overlay").style.display = "none";
 });
 
-function getRandomPhraseAsArray(arr) {
+function getRandomPhrasesAsArray(phrases) {
     // this is for random phrases to be selected.
     var arr = arr[Math.floor(Math.random() * arr.length)];
-    var phrases = phrases[Math.floor(Math.random() * arr.length)];
+
     return arr;
 };
-getRandomPhrasesArray(phrases);
+getRandomPhrasesAsArray(phrases);
 
 
 
