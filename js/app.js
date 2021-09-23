@@ -19,6 +19,7 @@ btn__reset.addEventListener('click', e => {
 function getRandomPhrasesAsArray(phrases) {
     // this is for random phrases to be selected.
     var phrases = phrases[Math.floor(Math.random() * phrases.length)];
+    var phrases = phrases.split("phrases");
 
     return phrases;
 };
