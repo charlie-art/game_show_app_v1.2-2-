@@ -7,7 +7,7 @@ let phrases = [
     "Coding Rules",
     "I love to code",
     "Fast Coding",
-    "Index.Html",
+    "Javascript",
     "Sass",
 
 ];
@@ -18,9 +18,9 @@ btn__reset.addEventListener('click', e => {
 
 function getRandomPhrasesAsArray(phrases) {
     // this is for random phrases to be selected.
-    var arr = arr[Math.floor(Math.random() * arr.length)];
+    var phrases = phrases[Math.floor(Math.random() * phrases.length)];
 
-    return arr;
+    return phrases;
 };
 getRandomPhrasesAsArray(phrases);
 
