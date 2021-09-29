@@ -4,7 +4,7 @@ const btn__reset = document.querySelector('.btn__reset');
 
 let missed = 0;
 
-let phrase = [
+let phrases = [
     "Coding Rules",
     "I love to code",
     "Fast Coding",
@@ -20,7 +20,7 @@ btn__reset.addEventListener('click', e => {
 
 function getRandomPhraseAsArray(arr) {
     // this is for random phrases to be selected.
-    var splitPhrases = phrase[Math.floor(Math.random() * arr.length)];
+    var splitPhrases = phrase[Math.floor(Math.random() * phrases.length)];
     var chosenPhrase = phrase.split("");
 
     return splitPhrase;
