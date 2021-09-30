@@ -28,4 +28,9 @@ function getRandomPhraseAsArray(arr) {
 getRandomPhraseAsArray(phrase);
 
 
+function addPhraseToDisplay() {
+
+
+};
+
 
