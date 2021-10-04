@@ -25,7 +25,7 @@ function getRandomPhraseAsArray(arr) {
 
     return phrase;
 };
-getRandomPhraseAsArray(phrases);
+getRandomPhraseAsArray(phrase);
 
 
 function addPhraseToDisplay() {
