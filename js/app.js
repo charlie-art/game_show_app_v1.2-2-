@@ -28,9 +28,16 @@ function getRandomPhraseAsArray(arr) {
 getRandomPhraseAsArray(phrase);
 
 
-function addPhraseToDisplay() {
+function addPhraseToDisplay(addPhraseToDisplay) {
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
 
 
+        let li = document.create.createElement('li')
+
+        li.appendChild(ul);
+
+    }
 };
 
 
