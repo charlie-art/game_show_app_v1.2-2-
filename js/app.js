@@ -18,14 +18,16 @@ btn__reset.addEventListener('click', e => {
     document.getElementById("overlay").style.display = "none";
 });
 
-function getRandomPhraseAsArray(arr) {
+function getRandomPhraseAsArray(arr,) {
     // this is for random phrases to be selected.
 
-    var chosenPhrases = phrases.split("");
-    var splitPhrases = splitPhrases[Math.floor(Math.random() * phrases.length)];
+    var chosenPhrases = arr.split("phrases");
+    var splitPhrases = splitPhrases[Math.floor(Math.random() * arr.length)];
 
     return chosenPhrases;
+
 };
+
 getRandomPhraseAsArray(phrases);
 
 
