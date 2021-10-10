@@ -44,4 +44,11 @@ function addPhraseToDisplay(addPhraseToDisplay) {
     }
 };
 
+const checkLetter = (letter) => {
+
+    let letters = document.querySelectorAll('.letter');
+
+
+}
+
 
