@@ -47,6 +47,7 @@ function addPhraseToDisplay(addPhraseToDisplay) {
 const checkLetter = (letter) => {
 
     let letters = document.querySelectorAll('.letter');
+    matchedLetterCount = 0;
 
 
 }
