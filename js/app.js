@@ -44,10 +44,9 @@ function addPhraseToDisplay(addPhraseToDisplay) {
     }
 };
 
-const checkLetter = (letter) => {
-
-    let letters = document.querySelectorAll('.letter');
-    matchedLetterCount = 0;
+function checkLetter(.start) {
+    pass in message
+    print in Message
 
 
 }
