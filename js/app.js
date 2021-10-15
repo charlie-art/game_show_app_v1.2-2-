@@ -44,9 +44,8 @@ function addPhraseToDisplay(addPhraseToDisplay) {
     }
 };
 
-function checkLetter(.start) {
-    pass in message
-    print in Message
+let checkLetter = (letter) => {
+
 
 
 }
