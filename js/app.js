@@ -32,7 +32,7 @@ function getRandomPhraseAsArray(arr) {
 getRandomPhraseAsArray(phrases);
 
 
-function addPhraseToDisplay(addPhraseToDisplay) {
+function addPhraseToDisplay('.letter') {
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
 
@@ -44,10 +44,27 @@ function addPhraseToDisplay(addPhraseToDisplay) {
     }
 };
 
-let checkLetter = (letter) => {
-
-
-
+const checkLetter = (letter) => {
+    let letters = document.querySelectorAll('.letter'),
+        matchedLetterCount = 0;
+    letters.forEach(item => {
+        let currentLetter = item.innerHTML.toLowerCase();
+        if (currentLetter === letter) {
+            item.className += ' show';
+            matchedLetterCount += 1;
+        }
+    });
+    if (matchedLetterCount === 0) {
+        letterFound = null;
+        matchedLetterCount = 0;
+    } else if (matchedLetterCount > 0) {
+        letterFound = letter;
+        matchedLetterCount = 0;
+    }
 }
+
+
+
+
 
 
