@@ -32,36 +32,31 @@ function getRandomPhraseAsArray(arr) {
 getRandomPhraseAsArray(phrases);
 
 
-function addPhraseToDisplay('.letter') {
+function addPhraseToDisplay(arr) {
+    // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
+
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
-
+        //create a li item
 
         let li = document.create.createElement('li')
 
-        li.appendChild(ul);
+        //Put the charater inside the list item.
 
+        li.appendChild(ul);
+        //Append that list item to the #​ phrase u​ l in your HTML//
+
+
+
+        //If the character in the array is a letter and not a space, the
+        //function should add the class “​ letter”​ to the list item.If not, add
+        //the ​“space”​ class.
+
+
+        // To use the function, you’ll get the value returned by the
+        //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
 };
-
-const checkLetter = (letter) => {
-    let letters = document.querySelectorAll('.letter'),
-        matchedLetterCount = 0;
-    letters.forEach(item => {
-        let currentLetter = item.innerHTML.toLowerCase();
-        if (currentLetter === letter) {
-            item.className += ' show';
-            matchedLetterCount += 1;
-        }
-    });
-    if (matchedLetterCount === 0) {
-        letterFound = null;
-        matchedLetterCount = 0;
-    } else if (matchedLetterCount > 0) {
-        letterFound = letter;
-        matchedLetterCount = 0;
-    }
-}
 
 
 
