@@ -46,7 +46,7 @@ function addPhraseToDisplay(arr) {
         li.appendChild(ul);
         //Append that list item to the #​ phrase u​ l in your HTML//
 
-
+        addPhraseToDisplay.call(arr)
 
         //If the character in the array is a letter and not a space, the
         //function should add the class “​ letter”​ to the list item.If not, add
