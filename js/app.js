@@ -35,8 +35,8 @@ getRandomPhraseAsArray(phrases);
 function addPhraseToDisplay(arr) {
     // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
 
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
+    for (let index = 0; index < addPhraseToDisplay.length; index++) {
+        const addPhraseToDisplay = addPhraseToDisplay[index];
         //create a li item
 
         let li = document.create.createElement('li')
@@ -46,7 +46,6 @@ function addPhraseToDisplay(arr) {
         li.appendChild(ul);
         //Append that list item to the #​ phrase u​ l in your HTML//
 
-        addPhraseToDisplay.call(arr)
 
         //If the character in the array is a letter and not a space, the
         //function should add the class “​ letter”​ to the list item.If not, add
@@ -57,6 +56,8 @@ function addPhraseToDisplay(arr) {
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
 };
+
+addPhraseToDisplay();
 
 
 
