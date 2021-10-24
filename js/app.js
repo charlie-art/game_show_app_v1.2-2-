@@ -1,7 +1,7 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
-
+const getRandomPhraseAsArray = document.querySelector('getRandomPhraseAsArray');
 let missed = 0;
 
 let phrases = [
@@ -33,19 +33,16 @@ getRandomPhraseAsArray(phrases);
 
 
 function addPhraseToDisplay(arr) {
-    // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
-
-    for (let index = 0; index < addPhraseToDisplay.length; index++) {
-        const addPhraseToDisplay = addPhraseToDisplay[index];
+    for (let index = 0; index < arr.length; index++) {
+        // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
+        const ul = document.getElementById('phraseList');
         //create a li item
-
-        let li = document.create.createElement('li')
+        const li = document.createElement('li');
 
         //Put the charater inside the list item.
 
-        li.appendChild(ul);
         //Append that list item to the #​ phrase u​ l in your HTML//
-
+        li.appendChild(ul);
 
         //If the character in the array is a letter and not a space, the
         //function should add the class “​ letter”​ to the list item.If not, add
@@ -57,7 +54,7 @@ function addPhraseToDisplay(arr) {
     }
 };
 
-addPhraseToDisplay();
+addPhraseToDisplay(getRandomPhraseAsArray);
 
 
 
