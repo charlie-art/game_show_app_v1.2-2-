@@ -2,6 +2,7 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const ul = document.getElementById('phraseList');
+
 let missed = 0;
 
 let phrases = [
@@ -32,6 +33,7 @@ function getRandomPhraseAsArray(arr) {
 getRandomPhraseAsArray(phrases);
 
 
+
 function addPhraseToDisplay(arr) {
     for (let index = 0; index < arr.length; index++) {
         // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
@@ -56,7 +58,7 @@ function addPhraseToDisplay(arr) {
     }
 };
 
-addPhraseToDisplay();
+addPhraseToDisplay(getRandomPhraseAsArray);
 
 
 
