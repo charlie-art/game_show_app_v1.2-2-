@@ -30,8 +30,9 @@ function getRandomPhraseAsArray(arr) {
 
 };
 
-getRandomPhraseAsArray(phrases);
-
+const getRandomPhraseAsArray = (splitPhrase);
+// To use the function, you’ll get the value returned by the
+//getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
 
 
 function addPhraseToDisplay(arr) {
@@ -57,8 +58,8 @@ function addPhraseToDisplay(arr) {
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
 };
+const addPhraseToDisplay = (phrases);
 
-addPhraseToDisplay(getRandomPhraseAsArray);
 
 
 
