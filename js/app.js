@@ -58,7 +58,7 @@ function addPhraseToDisplay(arr) {
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
 };
-const addPhraseToDisplay = (phrases);
+addPhraseToDisplay(phrases);
 
 
 
