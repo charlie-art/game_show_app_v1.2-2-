@@ -36,7 +36,7 @@ const randomPhrase = getRandomPhraseAsArray(phrases);
 
 
 function addPhraseToDisplay(arr) {
-    for (let index = 0; index < arr.length; index++) {
+    for (let i = 0; i < arr.length; i += 1) {
         // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
         //create a li item
 
