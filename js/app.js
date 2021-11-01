@@ -47,12 +47,11 @@ function addPhraseToDisplay(arr) {
 
 
         //Append that list item to the #​ phrase u​ l in your HTML//
-        li.appendChild(ul);
+        ul.appendChild(li);
 
         //If the character in the array is a letter and not a space, the
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
-        return li;
 
         // To use the function, you’ll get the value returned by the
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
