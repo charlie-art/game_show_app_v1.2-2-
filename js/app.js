@@ -53,6 +53,13 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
+        ul = li.ul
+        if (li.ul) {
+            // remove a node from the tree, unless
+            // it's not in the tree already
+            li.ul.addClass(li);
+        };
+
         // To use the function, you’ll get the value returned by the
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
