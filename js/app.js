@@ -30,7 +30,7 @@ function getRandomPhraseAsArray(arr) {
 
 };
 
-const randomPhrase = getRandomPhraseAsArray(phrases);
+const randomPhrase = getRandomPhraseAsArray(characters);
 
 // To use the function, you’ll get the value returned by the
 //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
@@ -54,8 +54,9 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        ul = li.ul
+
         if (li.ul) {
+            arr[i] === ' '
             // remove a node from the tree, unless
             // it's not in the tree already
             li.ul.addClass(li);
