@@ -55,12 +55,13 @@ function addPhraseToDisplay(arr) {
         //the ​“space”​ class.
 
 
-        let el = document.getElementById('item');
+        let el = document.getElementByClass('li');
 
-        if (el.className === 'active') {
-            el.className = 'inactive';
+        if (el.classSpace === 'li') {
+            arr[i] === ' '
+            el.classSpace = 'li';
         } else {
-            el.className = 'active';
+            el.classSpace = 'li';
         }
 
         // To use the function, you’ll get the value returned by the
