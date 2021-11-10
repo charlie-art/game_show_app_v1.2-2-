@@ -30,7 +30,7 @@ function getRandomPhraseAsArray(arr) {
 
 };
 
-const randomPhrase = getRandomPhraseAsArray(characters);
+const randomPhrase = getRandomPhraseAsArray(phrases);
 
 // To use the function, you’ll get the value returned by the
 //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
@@ -54,14 +54,11 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-
-        let el = document.getElementByClass('li');
-
         if (el.classSpace === 'li') {
             arr[i] === ' '
-            el.classSpace = 'li';
+            el.class = 'li';
         } else {
-            el.classSpace = 'li';
+            el.class = 'li';
         }
 
         // To use the function, you’ll get the value returned by the
