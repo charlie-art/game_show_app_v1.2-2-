@@ -3,6 +3,7 @@ const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const ul = document.getElementById('phraseList');
 
+
 let missed = 0;
 
 let phrases = [
@@ -54,11 +55,11 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        if (space.class === 'li') {
+        if (section.ol === 'li') {
             arr[i] === ' false'
-            space.class = 'li';
+            space.addSection = 'li';
         } else {
-            letter.class = 'li';
+            letter.addSection = 'li';
         }
 
         // To use the function, you’ll get the value returned by the
