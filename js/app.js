@@ -43,7 +43,7 @@ function addPhraseToDisplay(arr) {
         //create a li item
 
 
-        const li = document.createElement('li');
+        const li = document.getElementById("scoreboard").className = "li";
 
         //Put the charater inside the list item.
 
