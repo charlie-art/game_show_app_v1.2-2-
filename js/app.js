@@ -42,8 +42,7 @@ function addPhraseToDisplay(arr) {
         // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
         //create a li item
 
-
-        const li = document.getElementById("scoreboard").className = "li";
+        const li = document.createElement("li");
 
         //Put the charater inside the list item.
 
@@ -55,11 +54,11 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        if (section.ol === 'li') {
+        if (scoreboard === 'li') {
             arr[i] === ' false'
-            space.addSection = 'li';
+            classSpace.add('li');
         } else {
-            letter.addSection = 'li';
+            li.add('li');
         }
 
         // To use the function, you’ll get the value returned by the
