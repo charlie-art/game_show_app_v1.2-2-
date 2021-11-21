@@ -54,8 +54,8 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        if (scoreboard === 'li') {
-            arr[i] === ' false'
+        if (ol === 'li') {
+            arr[i] === 'textContent'
             classSpace.add('li');
         } else {
             li.add('li');
