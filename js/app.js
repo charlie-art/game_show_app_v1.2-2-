@@ -1,7 +1,7 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
-const ul = document.getElementById('phraseList');
+const ul = document.getElementById('phraseList').textContent;
 
 
 let missed = 0;
@@ -54,10 +54,10 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        if (arr[i] === 'false') {
-            classList.add('space');
+        if (arr[i] === " ") {
+            classList.add(" ");
         } else {
-            classList.add('letter');
+            classList.add("textcontent");
         }
 
         // To use the function, you’ll get the value returned by the
