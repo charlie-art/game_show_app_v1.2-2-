@@ -1,7 +1,7 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
-const ul = document.getElementById('phraseList').textContent;
+const ul = document.getElementById('phraseList');
 
 
 let missed = 0;
@@ -45,6 +45,7 @@ function addPhraseToDisplay(arr) {
         const li = document.createElement("li");
 
         //Put the charater inside the list item.
+        thislist.append(".textContent")
 
 
         //Append that list item to the #​ phrase u​ l in your HTML//
