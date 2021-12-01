@@ -55,10 +55,10 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        if (arr[i].textcontent === "space") {
-            classList.add("letter");
+        if (arr[i].textContent === " ") {
+            arr[i].classList.add(" ");
         } else {
-            classList.add("textcontent");
+            classList.add("letter");
         }
 
         // To use the function, you’ll get the value returned by the
