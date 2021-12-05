@@ -56,7 +56,7 @@ function addPhraseToDisplay(arr) {
         //the ​“space”​ class.
 
         if (arr[i].textContent === " ") {
-            arr[i].classList.add("li");
+            arr[i].classList.add("...");
         } else {
             arr[i].classList.add("space");
         }
