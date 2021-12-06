@@ -45,7 +45,6 @@ function addPhraseToDisplay(arr) {
         const li = document.createElement("li");
 
         //Put the charater inside the list item.
-        thisList.append(".textContent")
 
 
         //Append that list item to the #​ phrase u​ l in your HTML//
@@ -55,7 +54,7 @@ function addPhraseToDisplay(arr) {
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
-        if (arr[i].textContent === " ") {
+        if (arr[i] === " ") {
             arr[i].classList.add("...");
         } else {
             arr[i].classList.add("space");
