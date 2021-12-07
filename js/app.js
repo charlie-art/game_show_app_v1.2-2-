@@ -55,9 +55,9 @@ function addPhraseToDisplay(arr) {
         //the ​“space”​ class.
 
         if (arr[i] === " ") {
-            arr[i].classList.add("...");
-        } else {
             arr[i].classList.add("space");
+        } else {
+            arr[i].classList.add("letter");
         }
 
         // To use the function, you’ll get the value returned by the
