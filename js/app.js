@@ -60,6 +60,7 @@ function addPhraseToDisplay(arr) {
             arr[i].classList.add("letter");
         }
 
+
         // To use the function, you’ll get the value returned by the
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
