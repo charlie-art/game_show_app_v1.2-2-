@@ -31,7 +31,7 @@ function getRandomPhraseAsArray(arr) {
 
 };
 
-const randomPhrase = getRandomPhraseAsArray(phrases);
+let randomPhrase = getRandomPhraseAsArray(phrases);
 
 // To use the function, you’ll get the value returned by the
 //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
@@ -50,14 +50,16 @@ function addPhraseToDisplay(arr) {
         //Append that list item to the #​ phrase u​ l in your HTML//
         ul.appendChild(li);
 
+        console.log(arr[i]);
+
         //If the character in the array is a letter and not a space, the
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
 
         if (arr[i] === " ") {
-            arr[i].classList.add("space");
+            li.classList.add("space");
         } else {
-            arr[i].classList.add("letter");
+            li.classList.add("letter");
         }
 
 
@@ -65,7 +67,21 @@ function addPhraseToDisplay(arr) {
         //getRandomPhraseAsArray, save it to a variable, and pass it to addPhraseToDisplay as an argument.
     }
 };
-addPhraseToDisplay(phrases);
+addPhraseToDisplay(randomPhrase);
+
+function checkLetter(button) {
+    let liArr = document.querySelectorAll("li");
+    let match = null;
+    for (let index = 0; index < liArr.length; index++) {
+        if (button.innerText === liArr[index].innerText) {
+            li.classList.add("show")
+            match = button.innerText;
+        }
+    }
+
+    return match;
+}
+
 
 
 
