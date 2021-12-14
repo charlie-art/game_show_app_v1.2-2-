@@ -83,6 +83,10 @@ function checkLetter(button) {
 }
 
 
+qwerty.addEventListener('click', e => {
+    document.getElementById("overlay").style.display = "none";
+});
+
 
 
 
