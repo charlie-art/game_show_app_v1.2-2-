@@ -84,8 +84,12 @@ function checkLetter(button) {
 
 
 qwerty.addEventListener('click', e => {
-    document.getElementById("overlay").style.display = "none";
-});
+    if (  ) {
+
+
+        tries = document.querySelectorAll('.tries');
+
+    };
 
 
 
