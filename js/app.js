@@ -83,13 +83,22 @@ function checkLetter(button) {
 }
 
 
-qwerty.addEventListener('click', e => {
-    if (  ) {
-
-
+qwerty.addEventListener('click', (event) => {
+    if (event.target.tagName === "BUTTON") {
+        let button,
+            letterFound = '',
+            tries = document.querySelectorAll('.tries');
         tries = document.querySelectorAll('.tries');
 
     };
+
+
+    checkWin => ()  {
+
+
+    }
+
+
 
 
 
