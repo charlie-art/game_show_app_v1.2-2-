@@ -85,18 +85,12 @@ function checkLetter(button) {
 
 qwerty.addEventListener('click', (event) => {
     if (event.target.tagName === "BUTTON") {
-        let button,
-            letterFound = '',
+        button.letterFound = '',
             tries = document.querySelectorAll('.tries');
         tries = document.querySelectorAll('.tries');
 
     };
 
-
-    checkWin => ()  {
-
-
-    }
 
 
 
