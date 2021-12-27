@@ -2,6 +2,7 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const ul = document.getElementById('phraseList');
+const scoreBoard = document.getElementById('scoreboard');
 
 
 let missed = 0;
@@ -82,12 +83,19 @@ function checkLetter(button) {
     return match;
 }
 
-
+// This function is not working properly checkLetter should be verified that it's working.
 qwerty.addEventListener('click', (event) => {
     if (event.target.tagName === " ") {
+    }
 
+    event.target.classList.add("chosen")
+    let result = checkLetter(event.target)
 
-    };
+    if (result == null) {
+        // scoreBoard.classList.remove
+        missed++
+    }
+})
 
 
 
