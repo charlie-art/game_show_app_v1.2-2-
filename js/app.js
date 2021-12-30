@@ -47,6 +47,8 @@ function addPhraseToDisplay(arr) {
 
         //Put the charater inside the list item.
 
+        li = ["h", "c", "d", "s"]
+
 
         //Append that list item to the #​ phrase u​ l in your HTML//
         ul.appendChild(li);
@@ -86,11 +88,11 @@ function checkLetter(button) {
 // This function is not working properly checkLetter should be verified that it's working.
 qwerty.addEventListener('click', (event) => {
     if (event.target.tagName === " ") {
+
+
+        event.target.tagName.add("BUTTON")
+        let result = checkLetter(event.target)
     }
-
-    event.target.classList.add("chosen")
-    let result = checkLetter(event.target)
-
     if (result == null) {
         // scoreBoard.classList.remove
         missed++
