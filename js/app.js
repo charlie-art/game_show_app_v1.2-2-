@@ -47,7 +47,7 @@ function addPhraseToDisplay(arr) {
 
         //Put the charater inside the list item.
 
-        li = ["h", "c", "d", "s"]
+        arr[i].textContent = "li";
 
 
         //Append that list item to the #​ phrase u​ l in your HTML//
@@ -94,7 +94,7 @@ qwerty.addEventListener('click', (event) => {
         let result = checkLetter(event.target)
     }
     if (result == null) {
-        // scoreBoard.classList.remove
+        scoreBoard.classList.remove
         missed++
     }
 })
