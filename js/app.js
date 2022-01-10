@@ -47,7 +47,7 @@ function addPhraseToDisplay(arr) {
 
         //Put the charater inside the list item.
 
-        li.arr[i] = "li";
+        li.textContent = "arr[i]";
 
 
         //Append that list item to the #​ phrase u​ l in your HTML//
