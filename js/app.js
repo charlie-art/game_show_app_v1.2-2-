@@ -3,7 +3,8 @@ const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const ul = document.getElementById('phraseList');
 const scoreBoard = document.getElementById('scoreboard');
-
+const li = document.getElementsByClassName('letter');
+const li = document.getElementsByClassName('show');
 
 let missed = 0;
 
@@ -47,7 +48,7 @@ function addPhraseToDisplay(arr) {
 
         //Put the charater inside the list item.
 
-        li.textContent = "arr[i]";
+        li.textContent = "arri";
 
 
         //Append that list item to the #​ phrase u​ l in your HTML//
@@ -98,6 +99,11 @@ qwerty.addEventListener('click', (event) => {
         missed++
     }
 })
+
+function checkWin() {
+
+
+}
 
 
 
