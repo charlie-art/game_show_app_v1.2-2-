@@ -1,10 +1,11 @@
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
-const ul = document.getElementById('phraseList');
+const phraseList = document.getElementById('phraseList');
 const scoreBoard = document.getElementById('scoreboard');
 const li = document.getElementsByClassName('letter');
-const li = document.getElementsByClassName('show');
+const show = document.getElementsByClassName('show');
+const tryList = document.getElementById('tryList');
 
 let missed = 0;
 
@@ -14,9 +15,7 @@ let phrases = [
     "Fast Coding",
     "Javascript",
     "Sass",
-
 ];
-
 
 btn__reset.addEventListener('click', e => {
     document.getElementById("overlay").style.display = "none";
@@ -25,12 +24,11 @@ btn__reset.addEventListener('click', e => {
 function getRandomPhraseAsArray(arr) {
     // this is for random phrases to be selected.
     const randomNumber = Math.floor(Math.random() * arr.length);
-    const randomPhrase = arr[randomNumber];
+    const randomPhrase = arr[randomNumber].toLowerCase();
     const splitPhrase = randomPhrase.split('');
     console.log(splitPhrase);
 
     return splitPhrase;
-
 };
 
 let randomPhrase = getRandomPhraseAsArray(phrases);
@@ -41,25 +39,19 @@ let randomPhrase = getRandomPhraseAsArray(phrases);
 
 function addPhraseToDisplay(arr) {
     for (let i = 0; i < arr.length; i += 1) {
-        // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display. 
+        // Create an a​ ddPhraseToDisplay​ function that loops through an array of characters.You will need to write it ​so that it can take ​any​ array of letters and add it to the display.
         //create a li item
-
         const li = document.createElement("li");
 
-        //Put the charater inside the list item.
+        //Put the character inside the list item.
+        li.textContent = arr[i];
 
-        li.textContent = "arri";
-
-
-        //Append that list item to the #​ phrase u​ l in your HTML//
-        ul.appendChild(li);
-
-        console.log(arr[i]);
+        //Append that list item to the #​phrase u​l in your HTML
+        phraseList.appendChild(li);
 
         //If the character in the array is a letter and not a space, the
         //function should add the class “​ letter”​ to the list item.If not, add
         //the ​“space”​ class.
-
         if (arr[i] === " ") {
             li.classList.add("space");
         } else {
@@ -78,7 +70,7 @@ function checkLetter(button) {
     let match = null;
     for (let index = 0; index < liArr.length; index++) {
         if (button.innerText === liArr[index].innerText) {
-            li.classList.add("show")
+            liArr[index].classList.add("show");
             match = button.innerText;
         }
     }
@@ -86,23 +78,49 @@ function checkLetter(button) {
     return match;
 }
 
-// This function is not working properly checkLetter should be verified that it's working.
 qwerty.addEventListener('click', (event) => {
-    if (event.target.tagName === " ") {
+    let button = event.target;
 
-
-        event.target.tagName.add("BUTTON")
-        let result = checkLetter(event.target)
+    // Use a conditional to filter out clicks that don’t happen on the buttons or if the button already has the “chosen” class
+    if (button.tagName !== "BUTTON" || button.className === "chosen") {
+        return;
     }
-    if (result == null) {
-        scoreBoard.classList.remove
+
+    // Add the “chosen” class to the button that was pressed.
+    button.classList.add("chosen");
+
+    // Call the checkLetter function and store the results in a variable.
+    let result = checkLetter(event.target);
+
+    // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
+    if (result == null && tryList.children.length > 0) {
+        tryList.removeChild(tryList.children[0]);
         missed++
     }
+
+    // Checks if the user has won.
+    checkWin()
 })
 
 function checkWin() {
+    let letter = document.getElementsByClassName('letter');
+    let show = document.getElementsByClassName('show');
+    let startOverlay = document.getElementById('overlay');
+    let startHeaderText = document.getElementsByClassName('title')[0];
 
+    // Display if the user wins the game
+    if (letter.length === show.length) {
+        startOverlay.classList.add('win');
+        startHeaderText.innerText = "You Won!";
+        startOverlay.style.display = "flex";
+    }
 
+    // Display if the user loses the game
+    if (missed > 4) {
+        startOverlay.classList.add('lose');
+        startHeaderText.innerText = "You Lost!";
+        startOverlay.style.display = "flex";
+    }
 }
 
 
