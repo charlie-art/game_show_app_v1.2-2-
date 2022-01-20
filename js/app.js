@@ -93,7 +93,7 @@ qwerty.addEventListener('click', (event) => {
     let result = checkLetter(event.target);
 
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
-    if (result === button && tryList.children.length > 0) {
+    if (result === 'scoreboard' && tryList.children.length > 0) {
         tryList.removeChild(tryList.children[0]);
         missed++
     }
