@@ -5,7 +5,7 @@ const phraseList = document.getElementById('phraseList');
 const scoreBoard = document.getElementById('scoreboard');
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
-const tryList = document.getElementById('tryList');
+const tryList = document.getElementById('scoreboard');
 
 let missed = 0;
 
