@@ -93,9 +93,10 @@ qwerty.addEventListener('click', (event) => {
     let result = checkLetter(event.target);
 
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
+    console.log(result);
     if (result === "checkLetter" && tryList.length > 0) {
         ol.appendChild(li);
-        tryList.removeChild(tryList.children[0]);
+        lostHeart.removeChild(lostHeart.children[0]);
         missed++
     }
 
