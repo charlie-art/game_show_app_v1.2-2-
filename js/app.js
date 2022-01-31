@@ -94,7 +94,7 @@ qwerty.addEventListener('click', (event) => {
 
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
     console.log(result);
-    if (result === "checkLetter" && tryList.length > 0) {
+    if (result === "BUTTON" && tryList.length > 0) {
         ol.appendChild(li);
         lostHeart.removeChild(lostHeart.children[0]);
         missed++
@@ -118,7 +118,7 @@ function checkWin() {
     }
 
     // Display if the user loses the game
-    if (missed > 4) {
+    if (missed > 0) {
         startOverlay.classList.add('lose');
         startHeaderText.innerText = "You Lost!";
         startOverlay.style.display = "flex";
