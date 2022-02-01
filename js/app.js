@@ -5,7 +5,7 @@ const phraseList = document.getElementById('phraseList');
 const scoreBoard = document.getElementById('scoreboard');
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
-const tryList = document.getElementById('scoreboard');
+const tryList = document.getElementById('tryList');
 
 let missed = 0;
 
@@ -94,7 +94,7 @@ qwerty.addEventListener('click', (event) => {
 
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
     console.log(result);
-    if (result === "BUTTON" && tryList.length > 1) {
+    if (result === "BUTTON" && tryList.length > 0) {
         ol.appendChild(li);
         lostHeart.removeChild(lostHeart.children[0]);
         missed++
