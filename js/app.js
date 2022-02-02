@@ -2,7 +2,7 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const phraseList = document.getElementById('phraseList');
-const scoreBoard = document.getElementById('scoreboard');
+const scoreBoard = document.getElementById('scoreboard').src = "images/lostHeart.png";
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
 const tryList = document.getElementById('tryList');
@@ -94,9 +94,8 @@ qwerty.addEventListener('click', (event) => {
 
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
     console.log(result);
-    if (result === "BUTTON" && tryList.length > 0) {
-        ol.appendChild(li);
-        lostHeart.removeChild(lostHeart.children[0]);
+    if (result === "null") {
+        img.src = "images/lostHeart.png";
         missed++
     }
 
