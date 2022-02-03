@@ -6,6 +6,7 @@ const scoreBoard = document.getElementById('scoreboard').src = "images/lostHeart
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
 const tryList = document.getElementById('tryList');
+const liveHeart = document.querySelectorAll('liveHeart.png')
 
 let missed = 0;
 
@@ -95,7 +96,7 @@ qwerty.addEventListener('click', (event) => {
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
     console.log(result);
     if (result === "null") {
-        img.src = "images/lostHeart.png";
+        img.src = "liveHeart.png";
         missed++
     }
 
