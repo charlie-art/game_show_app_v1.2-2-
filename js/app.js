@@ -2,13 +2,13 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const phraseList = document.getElementById('phraseList');
-const scoreBoard = document.getElementById('scoreboard').src = "images/lostHeart.png";
+const scoreBoard = document.getElementById('scoreboard').src = "images/livetHeart.png";
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
 const tryList = document.getElementById('tryList');
-const liveHeart = document.querySelectorAll('liveHeart.png')
+const hearts = document.querySelectorAll('.tries img')
 
-let missed = 0;
+let missed = hearts;
 
 let phrases = [
     "Coding Rules",
@@ -96,8 +96,7 @@ qwerty.addEventListener('click', (event) => {
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
     console.log(result);
     if (result === "null") {
-        img.src = "liveHeart.png";
-        missed++
+        missed.target.hearts = "images/livetHeart.png";
     }
 
     // Checks if the user has won.
