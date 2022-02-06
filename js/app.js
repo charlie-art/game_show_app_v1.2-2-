@@ -2,13 +2,12 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btn__reset = document.querySelector('.btn__reset');
 const phraseList = document.getElementById('phraseList');
-const scoreBoard = document.getElementById('scoreboard').src = "images/livetHeart.png";
+const scoreBoard = document.getElementById('scoreboard');
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
-const tryList = document.getElementById('tryList');
-const hearts = document.querySelectorAll('.tries img')
+const lives = document.getElementById('lives').getElementsByTagName('li');
 
-let missed = hearts;
+let missed = 0;
 
 let phrases = [
     "Coding Rules",
@@ -68,11 +67,11 @@ addPhraseToDisplay(randomPhrase);
 
 function checkLetter(button) {
     let liArr = document.querySelectorAll("li");
-    let match = null;
+    let match = false;
     for (let index = 0; index < liArr.length; index++) {
         if (button.innerText === liArr[index].innerText) {
             liArr[index].classList.add("show");
-            match = button.innerText;
+            match = true;
         }
     }
 
@@ -91,12 +90,12 @@ qwerty.addEventListener('click', (event) => {
     button.classList.add("chosen");
 
     // Call the checkLetter function and store the results in a variable.
-    let result = checkLetter(event.target);
+    let correctLetter = checkLetter(event.target);
 
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
-    console.log(result);
-    if (result === "null") {
-        missed.target.hearts = "images/livetHeart.png";
+    if ((!correctLetter) && lives.length > 0) {
+        lives[0].remove();
+        missed++
     }
 
     // Checks if the user has won.
@@ -117,7 +116,7 @@ function checkWin() {
     }
 
     // Display if the user loses the game
-    if (missed > 0) {
+    if (missed > 4) {
         startOverlay.classList.add('lose');
         startHeaderText.innerText = "You Lost!";
         startOverlay.style.display = "flex";
