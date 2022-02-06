@@ -88,6 +88,7 @@ qwerty.addEventListener('click', (event) => {
 
     // Add the “chosen” class to the button that was pressed.
     button.classList.add("chosen");
+    button.setAttribute("disabled", "true");
 
     // Call the checkLetter function and store the results in a variable.
     let correctLetter = checkLetter(event.target);
