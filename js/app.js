@@ -104,10 +104,12 @@ qwerty.addEventListener('click', (event) => {
 })
 
 function checkWin() {
+
     let letter = document.getElementsByClassName('letter');
     let show = document.getElementsByClassName('show');
     let startOverlay = document.getElementById('overlay');
     let startHeaderText = document.getElementsByClassName('title')[0];
+
 
     // Display if the user wins the game
     if (letter.length === show.length) {
