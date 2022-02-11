@@ -6,7 +6,7 @@ const scoreBoard = document.getElementById('scoreboard');
 const li = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
 const lives = document.getElementById('lives').getElementsByTagName('li');
-
+const img = document.querySelectorAll("img");
 let missed = 0;
 
 let phrases = [
@@ -93,10 +93,13 @@ qwerty.addEventListener('click', (event) => {
     // Call the checkLetter function and store the results in a variable.
     let correctLetter = checkLetter(event.target);
 
+
     // If the checkLetter function does not find a letter, remove one of the heart images and increment the missed counter
     if ((!correctLetter) && lives.length > 0) {
-        lives[0].remove();
-        missed(lostHeart.png)
+        // lives[0].remove();
+        img[missed].src = "images/lostHeart.png";
+        missed++;
+
     }
 
     // Checks if the user has won.
